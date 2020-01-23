@@ -2,70 +2,122 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="static/css/styles.css">
-  <title>Titel van het document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <title>Ik huil</title>
 </head>
 
 <body>
-  <header>
-    <img class="logo-header" src="img/logo-db.png" alt="logo website">
-    <nav>
-      <ul class="block">
-        <li><a href="">Soepie</a></li>
-        <li><a href="">Woepie</a></li>
-        <li><a href="">Doepie</a></li>
-        <li><a href="">Poepie</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div id="border"></div>
+    <!-- Navigatie-->
+    <div id="whitebox">
+        <header>
+            <img id="logo-head" src="img/logo-db.png" alt="logo website">
+            <img id="logo-title" src="img/DesignBetter.svg" alt="DesignBetter by Aman">
+            <img id="menu" src="img/hamburger.svg" alt="menu">
+            <!-- <aside> -->
+            <nav>
+                <ul>
+                    <li><a href="">Design Maturity Model</a></li>
+                    <li><a href="">Books</a></li>
+                    <li><a href="">Podcast</a></li>
+                    <li><a href="">Conversations</a></li>
+                    <li><a href="">Subscribe</a></li>
+                </ul>
+            </nav>
+            <!-- </aside> -->
+        </header>
 
-  <!-- werkt dit nog wel-->
+        <!--   Big CTA -->
+        <section>
+            <img src="img/Bigwrapimg.jpeg" alt="">
+            <article>
+                <span id="banner-title">Learn on the go</span>
+                <span id="banner-txt">The Design Better library now available as free audiobooks.
+                </span>
+                <div class="btn-banner">
+                    <a href="books"></a> GET AUDIOBOOKS</div>
+            </article>
 
-  <article>
-    <h1>Titel voor deze sectie</h1>
-      <img src="" alt=""><img src="img/logo-db.png" alt=""><img src="" alt=""><img src="" alt="">
-      <p>Korte omschrijving onder de titel</p>
+        </section>
+        <!-- Library -->
+        <main>
+            <article id="Blibrary" link="books">
+                <img src="img/Bfrombooks.png" alt="">
+                <h2>The Library</h2>
+                <p>Essential reading on the practices that propel the best design teams forward.
+                </p>
+                <p> Available in ePub, PDF, and audiobook formats.</p>
+            </article>
+            <!-- Highlighted Article -->
+            <article>
+                <img src="img/AnimationHandbook_A.png" alt="">
+                <section>
+                    <h2>Animation Handbook</h2>
+                    <p>By Ryan Mcleod</p>
+                    <p> When it comes to software design, animation is a limitless way to make digital products feel more real by replacing “telling” with “showing.” Learn how you can use animation to demonstrate abstract concepts, make products feel more
+                        life-like, and instill more emotion into digital experiences.
+                    </p>
+                    <p>Available in epub, PDF, and audiobook formats.</p>
+                    <div>Get the book</div>
+                </section>
+            </article>
+            <!-- Articles Library in grid -->
+            <article>
+                <img src="img/mainbooks/sprints-thumb.png" alt="">
+                <h3>Enterprise Design Sprints</h3>
+                <p>By Richard Banfield</p>
+            </article>
 
-  </article>
+            <article>
+                <img src="img/mainbooks/ops-thumb.png" alt="">
+                <h3>DesignOps Handbook</h3>
+                <p>By Dave Malouf, Meredith Black, Collin Whitehead, Kate Battles, and Gregg Bernstein (editor)</p>
+            </article>
 
-  <article>
-    <img src="" alt="">
-    <h2>Titel onder image</h2>
-    <p>beschrijving onder titel</p>
-  </article>
+            <article>
+                <img src="img/mainbooks/systems-thumb.png" alt="">
+                <h3>Design Systems Handbook</h3>
+                <p>By Marco Suarez, Jina Anne, Katie Sylor-Miller, Diana Mounter, and Roy Stanfieldg</p>
+            </article>
 
+            <article>
+                <img src="img/mainbooks/leadership-thumb.png" alt="">
+                <h3>Design Leadership Handbook</h3>
+                <p>By Aarron Walter and Eli Woolery</p>
+            </article>
 
-  <article>
-    <img src="" alt="">
-    <h1>Titel onder image</h1>
-    <p>korte beschrijving</p>
+            <article>
+                <img src="img/mainbooks/thinking-thumb.png" alt="">
+                <h3>Design Thinking Handbook</h3>
+                <p>By Eli Woolery</p>
+            </article>
 
-    <img src="" alt="">
-    <h1>Titel onder image</h1>
-    <p>korte beschrijving</p>
+            <article>
+                <img src="img/mainbooks/product-thumb.png" alt="">
+                <h3>Principles of Product Design</h3>
+                <p>By Aarron Walter</p>
+            </article>
+        </main>
+        <!-- Form -->
+        <section>
+            <h4>Very insightful, many interviews with technologists and creatives</h4>
+            <p>Get the Conversations newsletter. Wow</p>
+        </section>
+        <form action="contact">
+            <input type="email" textarea="Your work Email" value placeholder="Your work email">
+            <input type="text" name="Your first name" value placeholder="Your first name">
+            <input type="text" name="Your last name" value placeholder="Your last name">
+            <input type="checkbox">
+            <p>Send me updates</p>
+            <input type="submit" value="Subscribe">
+        </form>
+    </div>
 
-    <img src="" alt="">
-    <h1>Titel onder image</h1>
-    <p>korte beschrijving</p>
-  </article>
-  <article>
-    <h1>Contact me!</h1>
-    <p>sfeer tekst</p>
-    <form action="contact">
-      <input type="email" textarea="Your work name" value placeholder="Your email">
-      <input type="text" name="Your first name" value placeholder="First name">
-      <input type="text" name="Your last name" value placeholder="Last name">
-      <input type="submit" value="Send">
-    </form>
-  </article>
-  <footer>
-    voeten
-  </footer>
-
-
+    <!-- JS -->
+    <script src="static/js/script.js"></script>
 </body>
 
 </html>
