@@ -1,0 +1,130 @@
+    html {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+    }
+    
+    nav {
+        display: block;
+        margin-left: auto;
+        font-size: 0.6em;
+        font-weight: 700;
+        width: 100vw;
+        height: 100vh;
+        background-color: #ffe3ea;
+    }
+    /* Kruisje van deze link gepakt 
+    https://codepen.io/brissmyr/pen/egidw */
+    
+    #cross {
+        position: absolute;
+        right: 2em;
+        top: 3em;
+        width: 3em;
+        height: 3em;
+    }
+    
+    #cross:before,
+    #cross:after {
+        position: absolute;
+        left: 1em;
+        content: ' ';
+        height: 3em;
+        width: 0.2em;
+        background-color: #000;
+    }
+    
+    #cross:before {
+        transform: rotate(45deg);
+    }
+    
+    #cross:after {
+        transform: rotate(-45deg);
+    }
+    
+    .visible {
+        display: none;
+    }
+    /* cross eindigt hier */
+    
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        margin: auto 0;
+        padding: 0;
+        width: 20em;
+        max-height: 60em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+    }
+    
+    nav img {
+        padding: 1em;
+        width: 7em;
+        margin: auto;
+    }
+    
+    nav h1 {
+        text-align: center;
+        font-size: 3em;
+        font-weight: 100;
+        margin: 1em auto;
+    }
+    
+    nav ul li {
+        height: 5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto 0;
+        border-bottom: black solid 1px;
+    }
+    
+    nav ul li a {
+        font-size: 1.1em;
+        text-transform: uppercase;
+        color: black;
+        text-decoration: none;
+    }
+    
+    #noborder {
+        border-bottom: none;
+    }
+    
+    a:hover {
+        opacity: 0.4;
+    }
+    
+    #btn-nav {
+        display: flex;
+        font-size: 1em;
+        font-weight: 700;
+        color: white;
+        background-color: #ff0063;
+        border: 2px solid #ff0063;
+        border-radius: 3em;
+        padding: 1.5em 2em;
+        justify-content: center;
+        width: 16em;
+        box-sizing: border-box;
+        height: auto;
+        margin: auto;
+        margin-top: 3em;
+        cursor: pointer;
+    }
+    
+    #btn-nav:hover {
+        color: #ff0063;
+        background-color: white;
+        border: 2px solid #ff0063;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 16em;
+    }
