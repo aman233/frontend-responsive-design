@@ -27,6 +27,9 @@ body {
     top: 0;
 } */
 
+
+/* Witte rand om website heen */
+
 #whitebox {
     background-color: transparent;
     position: absolute;
@@ -37,6 +40,12 @@ body {
     left: 0;
     top: 0;
 }
+
+
+/* Witte rand om website heen */
+
+
+/* Navigatie */
 
 header {
     display: flex;
@@ -208,6 +217,9 @@ a:hover {
 }
 
 
+/* Navigatie */
+
+
 /* Buttons */
 
 .btn-banner {
@@ -239,21 +251,23 @@ a:hover {
     border: 1px solid purple;
 }
 
+
+/* BIG CTA | Begin van content */
+
 section article {
     position: absolute;
     top: 6em;
     padding: 0 2em 0;
 }
 
-
-/* section article span {
-    /* position: absolute;
-    /* margin-top: 2em; 
+section article span {
+    position: absolute;
+    margin-top: 2em;
     color: pink;
     background-color: white;
     display: block;
     position: relative;
-} */
+}
 
 
 /* langere image nodig voor mobile? */
@@ -262,6 +276,12 @@ section img {
     display: flex;
     width: 100%;
 }
+
+
+/* BIG CTA | Begin van content */
+
+
+/* Library */
 
 main article:first-child {
     display: grid;
@@ -276,9 +296,18 @@ main article:first-child {
     /* width: 10em; */
 }
 
+
+/* Library */
+
+
+/* Main */
+
 main img {
     width: 100%;
 }
+
+
+/* Main */
 
 
 /* Mobile */
@@ -296,6 +325,9 @@ main img {
 /* Tablet */
 
 @media screen and (min-width: 30em) and (max-width: 50em) {
+    #whitebox {
+        border-color: #C4CFF5;
+    }
     nav {
         display: none;
     }
@@ -308,8 +340,8 @@ main img {
     html {
         font-size: 24px;
     }
-    body {
-        background-color: lightblue;
+    #whitebox {
+        border-color: #B0DFE5;
     }
     #menu {
         display: none;
