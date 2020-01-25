@@ -15,6 +15,9 @@ body {
     background-color: white;
 }
 
+
+/* Witte rand om website heen */
+
 #whitebox {
     background-color: transparent;
     position: absolute;
@@ -25,6 +28,12 @@ body {
     left: 0;
     top: 0;
 }
+
+
+/* Witte rand om website heen */
+
+
+/* Navigatie */
 
 header {
     display: flex;
@@ -196,6 +205,9 @@ a:hover {
 }
 
 
+/* Navigatie */
+
+
 /* Buttons */
 
 .btn-banner {
@@ -247,6 +259,12 @@ section img {
     width: 100%;
 }
 
+
+/* BIG CTA | Begin van content */
+
+
+/* Library */
+
 main article:first-child {
     display: grid;
     grid-template-columns: 1fr;
@@ -260,9 +278,18 @@ main article:first-child {
     /* width: 10em; */
 }
 
+
+/* Library */
+
+
+/* Main */
+
 main img {
     width: 100%;
 }
+
+
+/* Main */
 
 
 /* Mobile */
@@ -280,6 +307,9 @@ main img {
 /* Tablet */
 
 @media screen and (min-width: 30em) and (max-width: 50em) {
+    #whitebox {
+        border-color: #C4CFF5;
+    }
     nav {
         display: none;
     }
@@ -292,8 +322,8 @@ main img {
     html {
         font-size: 24px;
     }
-    body {
-        background-color: lightblue;
+    #whitebox {
+        border-color: #B0DFE5;
     }
     #menu {
         display: none;
