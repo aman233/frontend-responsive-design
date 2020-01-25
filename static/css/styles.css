@@ -15,18 +15,6 @@ body {
     background-color: white;
 }
 
-
-/* #border {
-    background-color: #e40a14e0;
-    position: fixed;
-    width: 96%;
-    height: 94%;
-    border: 1em solid cyan;
-    z-index: 7236;
-    left: 0;
-    top: 0;
-} */
-
 #whitebox {
     background-color: transparent;
     position: absolute;
@@ -239,27 +227,23 @@ a:hover {
     border: 1px solid purple;
 }
 
+
+/* End of Buttons */
+
+
+/* Banner CTA */
+
 section article {
-    position: absolute;
-    top: 6em;
+    position: relative;
     padding: 0 2em 0;
 }
-
-
-/* section article span {
-    /* position: absolute;
-    /* margin-top: 2em; 
-    color: pink;
-    background-color: white;
-    display: block;
-    position: relative;
-} */
 
 
 /* langere image nodig voor mobile? */
 
 section img {
     display: flex;
+    position: relative;
     width: 100%;
 }
 
