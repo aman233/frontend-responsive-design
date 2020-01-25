@@ -7,12 +7,13 @@
 
 html {
     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-    box-sizing: border-box;
 }
 
 body {
+    display: block;
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
+    box-sizing: border-box;
 }
 
 
@@ -27,6 +28,18 @@ body {
     z-index: 999;
     left: 0;
     top: 0;
+}
+
+section {
+    padding-left: 1em;
+}
+
+main {
+    padding-left: 1em;
+}
+
+form {
+    padding-left: 1em;
 }
 
 
@@ -58,7 +71,7 @@ header {
     position: relative;
     float: right;
     width: 2em;
-    padding: 1em 2em 1em 1em;
+    padding: 1em;
     margin-left: auto;
 }
 
@@ -79,7 +92,7 @@ https://codepen.io/brissmyr/pen/egidw */
 #cross {
     position: absolute;
     right: 3em;
-    top: 2em;
+    top: 4em;
     width: 3em;
     height: 3em;
 }
@@ -103,10 +116,17 @@ https://codepen.io/brissmyr/pen/egidw */
 }
 
 
-/* menu op mobile en desktop showen */
+/* menu op mobile */
 
 .visible {
     display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffe3ea;
+    padding: 10em;
 }
 
 .scrolling {
@@ -133,7 +153,7 @@ nav ul {
     padding: 0;
     width: 20em;
     max-height: 60em;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
@@ -181,6 +201,7 @@ a:hover {
     display: flex;
     font-size: 1em;
     font-weight: 700;
+    text-transform: uppercase;
     color: white;
     background-color: #ff0063;
     border: 2px solid #ff0063;
@@ -212,8 +233,10 @@ a:hover {
 
 .btn-banner {
     display: flex;
-    font-size: 0.5em;
+    font-size: 0.7em;
+    line-height: 1.2em;
     font-weight: 700;
+    text-transform: uppercase;
     color: white;
     background-color: #ff0063;
     border: 2px solid #ff0063;
@@ -235,58 +258,197 @@ a:hover {
     width: 16em;
 }
 
-.btn:nth-of-type(2) {
-    border: 1px solid purple;
-}
 
-
-/* End of Buttons */
+/* Buttons */
 
 
 /* Banner CTA */
 
 section article {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    padding: 0 2em 0;
+    background-color: #ffe3ea;
+    padding: 0 2em;
 }
 
+section article h1 {
+    text-align: left;
+    font-size: 2em;
+    margin: 1em 0 0;
+}
 
-/* langere image nodig voor mobile? */
+section article p {
+    word-spacing: 2px;
+    line-height: 1.5em;
+    margin: 1em 0 0;
+    text-align: left;
+}
+
+section article .btn-banner {
+    margin: 2em auto;
+}
 
 section img {
-    display: flex;
     position: relative;
     width: 100%;
 }
 
 
-/* Library */
+/* Best practices */
 
-main article:first-child {
-    display: grid;
-    grid-template-columns: 1fr;
+#svgsec {
+    display: flex;
+    flex-direction: column;
 }
 
-#Blibrary {
+section svg {
+    box-sizing: border-box;
+    align-content: center;
+    margin: 3em auto 2em;
+}
+
+section svg:first-child {
+    padding-right: 2em;
+}
+
+section svg:last-child {
+    margin: 2em auto 4em;
+}
+
+section h2 {
+    font-size: 3em;
+    font-weight: 500;
+    text-align: center;
+}
+
+section p {
+    line-height: 2em;
+    text-align: center;
+}
+
+
+/* Best practices */
+
+
+/* Library */
+
+
+/*Intro Library */
+
+main article h6 {
+    text-transform: uppercase;
+}
+
+main article:first-child {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     text-align: center;
-    border: 2px solid black;
-    /* width: 10em; */
+}
+
+main article:first-child img {
+    margin: 0 auto;
+    width: 6em;
+}
+
+main article h2 {
+    font-weight: 500;
+}
+
+main article p {
+    line-height: 2em;
+    text-align: center;
+}
+
+.italic {
+    margin: -1em auto 1em;
+    opacity: 0.7;
+    font-style: italic;
 }
 
 
-/* Library */
+/*Intro Library */
 
 
 /* Main */
+
+main {
+    padding: 0 1em;
+}
 
 main img {
     width: 100%;
 }
 
+.author {
+    opacity: 0.7;
+    font-size: 1em;
+    text-align: left;
+}
+
 
 /* Main */
+
+
+/* Highlighted Article */
+
+#highlight {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#highlight img {
+    margin-top: 2em;
+}
+
+#highlight h2 {
+    font-size: 2em;
+}
+
+#highlight .author {
+    font-size: 1em;
+    margin: 0 0 1em 0;
+}
+
+#highlight p {
+    font-size: 0.9em;
+    line-height: 2.3em;
+    text-align: left;
+    margin: 0 auto 1em;
+}
+
+#highlight .btn-banner {
+    justify-content: center;
+    margin: 1em auto 5em;
+}
+
+
+/* Highlighted Article */
+
+
+/* Articles Library in grid */
+
+#small-articles {
+    display: grid;
+}
+
+
+/* Articles Library in grid */
+
+
+/* Library */
+
+
+/* Library */
+
+
+/* Form */
+
+
+/* Form */
 
 
 /* Mobile */
@@ -309,6 +471,9 @@ main img {
     }
     nav {
         display: none;
+    }
+    nav ul {
+        top: 45%;
     }
 }
 
