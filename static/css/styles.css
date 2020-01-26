@@ -79,6 +79,16 @@
         }
         /* Kruisje van deze link gepakt  https://codepen.io/brissmyr/pen/egidw */
         
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        a:hover {
+            text-decoration: none;
+            color: var(--button-color);
+        }
+        
         #cross {
             position: absolute;
             right: 3em;
@@ -204,7 +214,7 @@
             font-size: 1em;
             font-weight: 700;
             text-transform: uppercase;
-            color: #fff;
+            color: #fff !important;
             background-color: var(--button-color);
             border: 2px solid var(--button-color);
             border-radius: 3em;
@@ -218,7 +228,7 @@
         }
         
         #btn-nav:hover {
-            color: #ff0063;
+            color: #ff0063 !important;
             background-color: #fff;
             border: 2px solid var(--button-color);
             justify-content: center;
@@ -233,7 +243,7 @@
             line-height: 1.2em;
             font-weight: 700;
             text-transform: uppercase;
-            color: white;
+            color: white !important;
             background-color: var(--button-color);
             border: 2px solid var(--button-color);
             border-radius: 3em;
@@ -245,7 +255,7 @@
         }
         
         .btn-banner:hover {
-            color: var(--button-color);
+            color: var(--button-color) !important;
             background-color: #fff;
             border: 2px solid var(--button-color);
             justify-content: center;
@@ -539,11 +549,90 @@
         }
         
         form .btn-banner:hover {
-            color: #0828CC;
+            color: #0828CC !important;
             background-color: #fff;
             border-color: #0828CC;
         }
         /* Form */
+        /* Detail Pagina hoerah */
+        
+        #detailpag a {
+            text-decoration: underline;
+            color: #000;
+        }
+        
+        #linkbtn {
+            text-decoration: none;
+        }
+        
+        #stommelinks {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+        }
+        
+        #stommelinks a {
+            margin: 1em auto;
+        }
+        
+        #whatbook {
+            font-size: 1em;
+            font-weight: 700;
+        }
+        
+        #whatbook-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto;
+            grid-gap: 3em;
+            max-width: 40em;
+            justify-content: space-between;
+            margin: auto;
+        }
+        
+        #detailpag .article-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        #detailpag .article-grid figure {
+            justify-content: center;
+            margin: 0 auto;
+        }
+        
+        #detailpag .article-grid h3 {
+            text-align: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        
+        #brug h2 {
+            font-size: 2em;
+        }
+        
+        #detailpag section h4 {
+            font-size: 2em;
+        }
+        
+        #mcleod img {
+            width: 100%;
+        }
+        
+        #mcleod h5 {
+            font-size: 0.7em;
+            color: #35cada;
+        }
+        
+        #mcleod p {
+            text-align: left;
+        }
+        
+        #detailpag ul {
+            background-color: #fff;
+            padding: 5em 1em 10em 3em;
+        }
+        /* Detail Pagina hoerah */
         /* Mobile */
         
         @media screen and (max-width: 30em) {
@@ -733,6 +822,37 @@
                 font-size: 0.6em;
             }
         }
+        /* detailpagina */
+        
+        #detailpag {
+            padding: 1em;
+        }
+        
+        #whatbook {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+        
+        #brug {
+            margin: 5em auto;
+        }
+        
+        #whatbook-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        #whatbook-grid .article-grid img {
+            width: 3em;
+        }
+        
+        #detailpag section h4 {
+            font-size: 4em;
+        }
+        
+        #detailpag ul {
+            max-width: 20em;
+        }
+        /* detailpagina */
         
         @media screen and (min-width: 70em) {
             #small-articles {

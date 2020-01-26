@@ -7,6 +7,7 @@ var main = document.querySelector("main")
 var form = document.querySelector("form")
 var hamburger = document.getElementById("menu")
 var closenav = document.getElementById("cross")
+var navbtn = document.getElementById("btn-nav")
 var logo = document.getElementById("logo-head")
 var title = document.getElementById("logo-title")
 
@@ -24,6 +25,20 @@ hamburger.addEventListener("click", function() {
 });
 
 closenav.addEventListener("click", function() {
+    nav.classList.remove("visible")
+    hamburger.classList.remove("gone")
+    logo.classList.remove("gone")
+    title.classList.remove("gone")
+    article.classList.remove("gone")
+    section.classList.remove("gone")
+    main.classList.remove("gone")
+    form.classList.remove("gone")
+    header.classList.remove("header-big")
+    body.classList.remove("scrolling")
+
+});
+
+navbtn.addEventListener("click", function() {
     nav.classList.remove("visible")
     hamburger.classList.remove("gone")
     logo.classList.remove("gone")
