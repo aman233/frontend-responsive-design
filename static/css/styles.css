@@ -1,9 +1,23 @@
-/*  1em = 16px 
-    
-    responsive font size van slides:
-    https://css-tricks.com/snippets/css/fluid-typography/
+/*  1em = 16px  Mobile first */
 
-    Mobile first */
+* {
+    box-sizing: border-box;
+}
+
+
+/* voorbeeld site gebruikt ze ook, weet niet of nuttig voor kleine projecten  */
+
+ :root {
+    --primary-color: #ffe3ea;
+    --secondary-color: #C4CFF5;
+    --third-color: #B0DFE5;
+    --button-color: #ff0063;
+    --btnhigh-color: #35cada;
+    --text-color: #101011;
+}
+
+
+/* responsive font size van slides: https://css-tricks.com/snippets/css/fluid-typography/ */
 
 html {
     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
@@ -12,38 +26,27 @@ html {
 body {
     display: block;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-    box-sizing: border-box;
+    background-color: #fff;
+    margin: 0;
+    padding: 1em 1em;
 }
 
 
-/* Witte rand om website heen */
+/* rand om website heen, voor de content en nadat content is getoond, dus het begin en helemaal beneden */
 
-#whitebox {
-    background-color: transparent;
-    position: absolute;
-    /* width: 100%;
-    height: 100%; */
-    border: 1em solid #ffe3ea;
-    z-index: 999;
+body::before,
+body::after {
+    content: '';
+    position: fixed;
     left: 0;
+    right: 0;
     top: 0;
+    border: 1em solid var(--primary-color);
+    bottom: 0;
+    z-index: 999;
+    border-bottom: 0px;
+    pointer-events: none;
 }
-
-section {
-    padding-left: 1em;
-}
-
-main {
-    padding-left: 1em;
-}
-
-form {
-    padding-left: 1em;
-}
-
-
-/* Witte rand om website heen */
 
 
 /* Navigatie */
@@ -52,27 +55,25 @@ header {
     display: flex;
     justify-content: flex-start;
     align-content: center;
-    background-color: white;
+    background-color: #fff;
     width: 100%;
 }
 
 #logo-head {
+    display: block;
     position: relative;
-    padding: 1em;
-    width: 3em;
+    width: 4em;
 }
 
 #logo-title {
     position: relative;
-    margin-right: auto;
+    margin-left: 1em;
 }
 
 #menu {
     position: relative;
-    float: right;
     width: 2em;
-    padding: 1em;
-    margin-left: auto;
+    margin: 0 1em 0 auto;
 }
 
 nav {
@@ -86,8 +87,7 @@ nav {
 }
 
 
-/* Kruisje van deze link gepakt 
-https://codepen.io/brissmyr/pen/egidw */
+/* Kruisje van deze link gepakt  https://codepen.io/brissmyr/pen/egidw */
 
 #cross {
     position: absolute;
@@ -116,7 +116,7 @@ https://codepen.io/brissmyr/pen/egidw */
 }
 
 
-/* menu op mobile */
+/* JS dingen */
 
 .visible {
     display: block;
@@ -125,7 +125,7 @@ https://codepen.io/brissmyr/pen/egidw */
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #ffe3ea;
+    background-color: var(--primary-color);
     padding: 10em;
 }
 
@@ -141,6 +141,27 @@ https://codepen.io/brissmyr/pen/egidw */
 .gone {
     display: none;
 }
+
+
+/* bar goedzetten na scroll actie */
+
+.fixed {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    width: calc(100% - 2em);
+}
+
+.fixed-padding {
+    padding-top: 6em;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* JS Dingen */
 
 
 /* cross eindigt hier */
@@ -179,13 +200,13 @@ nav ul li {
     align-items: center;
     justify-content: center;
     margin: auto 0;
-    border-bottom: black solid 1px;
+    border-bottom: var(--text-color) solid 1px;
 }
 
 nav ul li a {
     font-size: 1.1em;
     text-transform: uppercase;
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -202,14 +223,13 @@ a:hover {
     font-size: 1em;
     font-weight: 700;
     text-transform: uppercase;
-    color: white;
-    background-color: #ff0063;
-    border: 2px solid #ff0063;
+    color: #fff;
+    background-color: var(--button-color);
+    border: 2px solid var(--button-color);
     border-radius: 3em;
     padding: 1.5em 2em;
     justify-content: center;
     width: 16em;
-    box-sizing: border-box;
     height: auto;
     margin: auto;
     margin-top: 3em;
@@ -218,10 +238,9 @@ a:hover {
 
 #btn-nav:hover {
     color: #ff0063;
-    background-color: white;
-    border: 2px solid #ff0063;
+    background-color: #fff;
+    border: 2px solid var(--button-color);
     justify-content: center;
-    box-sizing: border-box;
     width: 16em;
 }
 
@@ -238,23 +257,21 @@ a:hover {
     font-weight: 700;
     text-transform: uppercase;
     color: white;
-    background-color: #ff0063;
-    border: 2px solid #ff0063;
+    background-color: var(--button-color);
+    border: 2px solid var(--button-color);
     border-radius: 3em;
     padding: 1.5em 2em;
     justify-content: center;
     width: 16em;
-    box-sizing: border-box;
     height: auto;
     cursor: pointer;
 }
 
 .btn-banner:hover {
-    color: #ff0063;
-    background-color: white;
-    border: 2px solid #ff0063;
+    color: var(--button-color);
+    background-color: #fff;
+    border: 2px solid var(--button-color);
     justify-content: center;
-    box-sizing: border-box;
     width: 16em;
 }
 
@@ -268,8 +285,8 @@ section article {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: #ffe3ea;
-    padding: 0 2em;
+    background-color: var(--primary-color);
+    padding: 0 1em;
 }
 
 section article h1 {
@@ -300,16 +317,16 @@ section img {
 #svgsec {
     display: flex;
     flex-direction: column;
+    padding: 0 1em;
 }
 
 section svg {
-    box-sizing: border-box;
     align-content: center;
-    margin: 3em auto 2em;
+    margin: 3em auto 0;
 }
 
 section svg:first-child {
-    padding-right: 2em;
+    padding-right: 4em;
 }
 
 section svg:last-child {
@@ -319,11 +336,13 @@ section svg:last-child {
 section h2 {
     font-size: 3em;
     font-weight: 500;
+    margin: auto;
     text-align: center;
 }
 
 section p {
     line-height: 2em;
+    margin: 1em auto;
     text-align: center;
 }
 
@@ -338,9 +357,10 @@ section p {
 
 main article h6 {
     text-transform: uppercase;
+    margin: 1em auto;
 }
 
-main article:first-child {
+#this {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -348,9 +368,13 @@ main article:first-child {
     text-align: center;
 }
 
-main article:first-child img {
+#this img {
     margin: 0 auto;
     width: 6em;
+}
+
+#this p {
+    margin-bottom: 1em;
 }
 
 main article h2 {
@@ -363,7 +387,6 @@ main article p {
 }
 
 .italic {
-    margin: -1em auto 1em;
     opacity: 0.7;
     font-style: italic;
 }
@@ -395,8 +418,7 @@ main img {
 /* Highlighted Article */
 
 #highlight {
-    display: flex;
-    flex-direction: column;
+    display: block;
     text-align: left;
 }
 
@@ -423,6 +445,14 @@ main img {
 #highlight .btn-banner {
     justify-content: center;
     margin: 1em auto 5em;
+    background-color: var(--btnhigh-color);
+    border-color: var(--btnhigh-color);
+}
+
+#highlight .btn-banner:hover {
+    color: var(--btnhigh-color);
+    background-color: #fff;
+    border-color: var(--btnhigh-color);
 }
 
 
@@ -433,6 +463,40 @@ main img {
 
 #small-articles {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3em;
+    align-content: left;
+}
+
+.article-grid {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+figure {
+    flex-wrap: nowrap;
+    margin: 0;
+}
+
+#small-articles aside {
+    margin: 0;
+    padding-left: 1em;
+}
+
+.article-grid img {
+    width: 8em;
+}
+
+.article-grid h3 {
+    text-align: left;
+    margin: 0;
+    line-height: 2em;
+}
+
+.article-grid p {
+    font-size: 0.9em;
+    margin: 0;
 }
 
 
@@ -460,14 +524,18 @@ main img {
     nav {
         display: none;
     }
+    body {
+        border-bottom: 1em solid var(--primary-color);
+    }
 }
 
 
 /* Tablet */
 
 @media screen and (min-width: 30em) and (max-width: 50em) {
-    #whitebox {
-        border-color: #C4CFF5;
+    body {
+        border-color: var(--secondary-color);
+        border-bottom: 1em solid var(--secondary-color);
     }
     nav {
         display: none;
@@ -484,13 +552,16 @@ main img {
     html {
         font-size: 24px;
     }
-    #whitebox {
-        border-color: #B0DFE5;
+    body {
+        border-color: var(--third-color);
     }
     #menu {
         display: none;
     }
     nav ul li {
         justify-content: space-evenly;
+    }
+    body::after {
+        border-bottom: 1em solid var(--third-color);
     }
 }
