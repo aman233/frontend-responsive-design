@@ -307,18 +307,22 @@
 
 
     <!-- Form -->
-
+    <section id="form-sec">
+        <h4>Very insightful, many interviews with technologists and creatives</h4>
+        <p>Get the Conversations newsletter, sent a few times a moneth. Wow</p>
+    </section>
     <form action="contact">
-        <section>
-            <h4>Very insightful, many interviews with technologists and creatives</h4>
-            <p>Get the Conversations newsletter. Wow</p>
-        </section>
-        <input type="email" textarea="Your work Email" value placeholder="Your work email">
-        <input type="text" name="Your first name" value placeholder="Your first name">
-        <input type="text" name="Your last name" value placeholder="Your last name">
-        <input type="checkbox">
-        <p>Send me updates</p>
-        <input type="submit" value="Subscribe">
+
+        <label for="email"> Your work email<input type="email" textarea="Your work Email"></label>
+        <label for="first name">Your first name<input type="text" name="Your first name"></label>
+        <label for="last name">Your last name<input type="text" name="Your last name"></label>
+
+        <label id="checkbox" for="newsletter">
+            <input id="checker" type="checkbox">
+            Send me updates
+        </label>
+        <input type="submit" value="Subscribe" class="btn-banner">
+
     </form>
     <!-- Form -->
 
