@@ -2,6 +2,7 @@
 Opdracht voor het vak Frontend @CMD Amsterdam
 
 [Het website van designbetter.co ga ik bestuderen en elementen eruit halen.]
+[https://aman233.github.io/frontend-responsive-design/]
 
 ## Criteria
 ### 1.) De HTML is gestructureerd en semantisch opgemaakt
