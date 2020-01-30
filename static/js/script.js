@@ -53,6 +53,17 @@ navbtn.addEventListener("click", function() {
 });
 
 
+///////////
+var jsparent = document.getElementById("js-parent");
+hamburger.addEventListener("click", function() {
+    jsparent.classList.add('active');
+    body.classList.add("scrolling");
+});
+closenav.addEventListener("click", function() {
+    jsparent.classList.remove('active');
+    body.classList.remove("scrolling");
+});
+
 // Broertje hielp met uitleg
 var headerHeight = header.offsetHeight; //headheight kennen
 var latestScroll = 0;
