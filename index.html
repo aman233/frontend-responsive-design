@@ -12,22 +12,25 @@
 <body>
     <!-- Navigatie-->
     <header>
-        <div class="js-parent">
-            <img id="logo-head" src="img/logo-db.png" alt="logo website">
-            <img id="logo-title" src="img/DesignBetter.svg" alt="DesignBetter by Aman">
+        <img id="logo-head" src="img/logo-db.png" alt="logo website">
+        <img id="logo-title" src="img/DesignBetter.svg" alt="DesignBetter by Aman">
+        <div id="js-parent">
             <nav>
                 <div id="cross"></div>
-                <img src="img/logo-db.png" alt="">
-                <h2>DesignBetter</h2>
-                <ul>
-                    <li><a href="">Design Maturity Model</a></li>
-                    <li><a href="">Books</a></li>
-                    <li><a href="">Podcast</a></li>
-                    <li id="noborder"><a href="">Conversations</a></li>
-                    <div id="btn-nav">
-                        <a href="#checkbox"></a> keep learning
-                    </div>
-                </ul>
+                <section id="nav-sec">
+                    <img src="img/logo-db.png" alt="">
+                    <h3>DesignBetter</h3>
+
+                    <ul>
+                        <li><a href="">Design Maturity Model</a></li>
+                        <li><a href="">Books</a></li>
+                        <li><a href="">Podcast</a></li>
+                        <li id="noborder"><a href="">Conversations</a></li>
+                        <div id="nav-cta">
+                            <a href="#checkbox">keep learning</a>
+                        </div>
+                    </ul>
+                </section>
             </nav>
         </div>
         <img id="menu" src="img/hamburger.svg" alt="menu">
@@ -37,7 +40,7 @@
 
 
     <!--   Big CTA | begin content -->
-    <section>
+    <section id="banner">
         <article>
             <h1><span>Learn on the go</span></h1>
             <p><span>The Design Better library now available as free audiobooks.</span> </p>
@@ -253,7 +256,7 @@
         <!-- Highlighted Article -->
 
         <!-- Articles Library in grid -->
-        <div id="small-articles">
+        <section id="small-articles">
             <article class="article-grid">
                 <figure> <img src="img/mainbooks/sprints-thumb.png" alt=""></figure>
                 <aside>
@@ -307,7 +310,7 @@
                 </aside>
 
             </article>
-        </div>
+        </section>
     </main>
     <!-- Articles Library in grid -->
 
@@ -316,7 +319,7 @@
 
     <!-- bridge -->
     <section id="form-sec">
-        <h4>Very insightful, many interviews with technologists and creatives</h4>
+        <h2>Very insightful, many interviews with technologists and creatives</h2>
         <p>Get the Conversations newsletter, sent a few times a month. Wow</p>
     </section>
     <!-- bridge -->
@@ -327,10 +330,10 @@
         <input type="text" placeholder="Your first name" name="firstname">
         <input type="text" placeholder="Your last name" name="lastname">
 
-        <section id="checkbox" for="newsletter">
+        <fieldset id="checkbox" for="newsletter">
             <input id="checker" type="checkbox">
             <p>Send me updates</p>
-        </section>
+        </fieldset>
         <input type="submit" value="Subscribe" class="btn-banner">
 
     </form>
